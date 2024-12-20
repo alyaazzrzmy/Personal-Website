@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ABOUTME</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=egde">
+
+	<link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Concert+One&family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+:root{
+	--pink:#cd4662;
+}
+
+*{
+   	margin: 0; padding: 0; 
+   	box-sizing: border-box;
+   	font-family: 'Varela Round', sans-serif;
+	outline: none; border: none;
+	text-decoration: none;
+	text-transform: capitalize; 
+	transition: .2 linear; 
+
+ }
+
+html{
+	font-size: 90%; 
+	scroll-behavior: smooth;
+	scroll-padding-top: 96px;
+	overflow-x: hidden;
+} 
+
+section{ 
+	padding: 2rem 9%;
+}
+
+.btn{
+	display: inline-block;
+	margin-top: 16px;
+	border-radius: 60px;
+	background: #333;
+	color: #fff;
+	padding: 8px 16px;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.btn:hover{
+	background:var(--pink);
+}
+		
+header {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	background: #cd4662;
+    	padding: 16px 2%; 
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	z-index: 1000;
+    	box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    	font-size: 24px;
+    	color: white;
+    	font-weight: bolder;
+}
+
+header .navbar {
+    	display: flex;
+    	justify-content: flex-start;
+    	gap: 20px;
+}
+
+header .navbar a {
+    	font-size: 19.2px;
+    	padding: 8px 16px;
+    	color: white;
+    	text-transform: capitalize;
+}
+
+header .navbar a:hover {
+    	color: #333;
+}
+
+header .hamburger {
+    	cursor: pointer;
+    	font-size: 24px;
+    	display: none;
+}
+
+#aboutme {
+    	position: relative;
+    	background: url("images/w.jpg") no-repeat;
+    	background-size: cover;  
+    	padding: 16px 5%;  
+    	margin-top: 60px;  
+}
+
+#aboutme::before {
+    	content: "";
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(1, 0, 3, 0.1);  
+    	z-index: 1;  
+}
+
+.container {
+    	position: relative; 
+    	max-width: 900px;
+    	margin: 0 auto;
+    	background-color: #fff;
+    	padding: 30px;
+    	border-radius: 10px;
+    	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    	z-index: 2;  
+}
+
+.heading {
+    	text-align: center;
+    	font-size: 55px;
+    	color: black;  
+    	margin-bottom: 32px;
+}
+
+.heading span {
+    	color: #cd4662;  
+ }
+
+.container {
+    	max-width: 900px;
+    	margin: 0 auto;
+    	background-color: #fff;
+    	padding: 30px;
+    	border-radius: 10px;
+    	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    	display: flex;
+    	justify-content: center;
+    	margin-bottom: 20px;
+}
+
+.profile-pic img {
+    	border-radius: 50%;
+    	width: 150px;
+    	height: 150px;
+    	object-fit: cover;
+    	border: 4px solid #f3f3f3;
+}
+
+.bio {
+    	font-size: 18px;
+    	line-height: 1.6;
+    	color: #555;
+    	text-align: justify;
+    	margin-bottom: 20px;
+    	text-transform: none;
+}
+
+.experience-section h2 {
+  	background-color: #fff4fe;
+  	text-align: center;
+  	font-family: "Chewy", system-ui;
+  	font-style: normal;
+  	letter-spacing: 2.3px; 
+  	font-size: 40px;
+  	padding: 30px; 
+  	margin-bottom: 20px;
+  	color: black;
+}
+
+.experience {
+  	background-color: #fff;
+  	border: 1px solid #ddd;
+  	border-radius: 8px;
+  	margin-bottom: 20px;
+  	padding: 15px;
+  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience h3 {
+  	font-size: 24px;
+  	color: #cd4662;
+  	margin-bottom: 10px;
+  	text-align: center;
+}
+
+.date {
+  	font-size: 14.4px;
+  	color: #777;
+  	margin-bottom: 10px;
+	text-align: center;
+}
+
+.experience + .experience {
+ 	margin-top: 20px;
+}
+
+.family-section {
+    	width: 100%px;
+    	padding: 50px 20px;
+    	background-color: #fff4fe;
+    	justify-items: center; 
+    	position: relative;  
+}
+
+.family-section h2 {
+   	text-align: center;
+    	font-family: "Chewy", system-ui;
+    	font-style: normal;
+    	letter-spacing: 2.3px;
+    	font-size: 40px;
+    	color: black;
+    	margin-bottom: 30px;
+}
+
+.family-cards {
+   	display: flex;
+    	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    	gap: 20px;
+    	justify-items: center;
+    	margin-top: 20px;
+}
+
+.family-card {
+    	position: relative;
+    	width: 100%;
+    	max-width: 350px;
+    	background-color: #fff;
+    	border-radius: 10px;
+    	overflow: hidden;
+    	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.family-card:hover {
+    	transform: translateY(-10px);
+    	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.family-card img {
+    	width: 100%;
+    	height: 250px;
+	object-fit: cover;
+}
+
+.family-info {
+    	padding: 20px;
+    	text-align: center;
+}
+
+.family-info h3 {
+    	font-size: 28.8px;
+    	color: #333;
+    	margin-bottom: 10px;
+}
+
+.family-info .name {
+    	font-size: 19.2px;
+    	font-weight: bold;
+    	color: #cd4662;
+    	margin-bottom: 5px;
+}
+
+.family-info .description {
+    	font-size: 16px;
+    	color: #777;
+    	margin-top: 10px;
+}
+
+.song-section {
+    	display: flex;
+    	justify-content: center;
+    	gap: 20px;
+    	text-align: center;
+    	flex-wrap: wrap;
+    	margin-bottom: 50px;
+    	position: relative;
+}
+
+
+.audio-box {
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center; 
+    	background: url("w.jpg");
+    	width: 300px;
+    	border-radius: 10px;
+    	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    	text-align: center;
+    	overflow: hidden;
+    	padding: 20px;
+    	position: relative; 
+}
+
+.audio-label {
+    	position: absolute;
+    	top: 10px; 
+    	right: -20px; 
+    	background-color: #cd4662; 
+    	color: black; 
+    	padding: 8px 15px;
+    	font-size: 12px;
+    	font-weight: bold;
+   	border-radius: 50px; 
+    	transform: rotate(45deg); 
+    	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.audio-image {
+    	width: 100%;
+    	height: 200px;
+    	object-fit: cover;
+    	border-radius: 10px;
+}
+
+.audio-player {
+    	width: 100%;
+    	margin-top: 15px;
+    	margin-bottom: 10px; 
+}
+
+.footer {
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	padding: 10px;
+    	background-color: #cd4662;
+    	color: #333;
+    	border-top: 2px solid #e0e0e0;
+}
+
+.footer-left, .footer-center, .footer-right {
+    	flex: 1;
+    	margin: 10px;
+}
+
+.footer-left h3 {
+    	color: white;
+    	font-size: 17px;
+}
+
+.footer-links {
+    	list-style: none;
+    	padding: 0;
+    	margin: 10px 0;
+}
+
+.footer-links a {
+    	color: white;
+    	text-decoration: none;
+    	margin: 0 10px;
+    	font-size: 16px;
+}
+
+.footer-links a:hover {
+    	color: #333;
+}
+
+.footer-center div {
+    	margin: 10px 0;
+    	display: flex;
+    	align-items: center;
+}
+
+.footer-center i {
+    	color: white;  
+    	font-size: 20px;
+    	margin-right: 10px; 
+}
+
+.footer-center p {
+    	display: inline-block;
+    	font-size: 16px;
+    	color: white;
+}
+
+.email-link {
+    	text-transform: lowercase;
+    	color: white;
+}
+
+.footer-right {
+    	display: flex;
+    	justify-content: flex-end;  
+    	align-items: center;        
+    	padding: 10px;
+}
+
+.footer-icons {
+    	display: flex;
+    	align-items: center;        
+}
+
+.footer-icons a {
+    	color: white;
+    	font-size: 24px;
+    	margin: 0 20px;
+    	transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    	color: #333;
+}
+
+.footer {
+    	border-radius: 3px;
+    	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copyright {
+    	background-color: #333;
+    	color: #fff;
+    	text-align: center;
+    	padding: 10px 0;
+    	font-size: 14px;
+}
+
+.copyright p {
+    	margin: 0;
+}
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+	html{
+		font-size: 55%; 
+	} 
+	
+	header{
+		padding: 32px;
+	}
+
+	section{
+		padding: 32px;
+	}
+}
+
+@media (max-width:768px){
+	header .navbar {
+        	display: none;
+        	flex-direction: column;
+        	align-items: flex-start;
+        	width: 100%;
+        	padding: 10px 0;
+    	}
+
+    	header .hamburger {
+        	display: block;
+    	}
+
+       	header .navbar.active {
+        	display: flex;
+    	}
+
+    	header .navbar a {
+        	padding: 12px 20px;
+        	font-size: 18px;
+        	text-align: left;
+        	width: 100%;
+    	}
+	
+	.heading {
+        	font-size: 32px;
+    	}
+
+    	.bio {
+        	font-size: 16px;
+    	}
+
+    	.profile-pic img {
+        	width: 120px;
+        	height: 120px;
+    	}
+
+    	#aboutme {
+        	padding: 32px 5%;
+    	}
+
+	.family-section {
+        	padding: 30px 15px;       
+    	}
+
+    	.family-section h2 {
+        	font-size: 30px;           
+    	}
+
+    	.family-card {
+        	max-width: 300px;          
+    	}
+
+    	.family-info h3 {
+        	font-size: 24px;           
+    	}
+
+    	.family-info .name {
+        	font-size: 18px;           
+    	}
+
+    	.family-info .description {
+        	font-size: 14px;           
+    	}
+
+	.footer {
+        	flex-direction: column;
+        	text-align: center;
+    	}
+    
+        .footer-left, .footer-center, .footer-right {
+        	margin-bottom: 20px;
+   	}
+
+        .footer-left h3 {
+        	font-size: 24px;
+    	}
+
+        .footer-links a {
+        	font-size: 14px;
+    	}
+	
+	.footer-right {
+        	text-align: center;
+    	}
+
+    	.footer-icons a {
+        	font-size: 20px;
+        	margin: 10px 15px;
+  	}
+}
+
+
+@media (max-width: 480px) {
+   	.family-section {
+        	padding: 20px 10px;        
+    	}
+
+    	.family-section h2 {
+        	font-size: 24px;          
+    	}
+
+    	.family-card {
+        	max-width: 250px;          
+    	}
+
+    	.family-info h3 {
+        	font-size: 20px;           
+    	}
+
+    	.family-info .name {
+        	font-size: 16px;           
+    	}
+
+    	.family-info .description {
+        	font-size: 12px;               	
+	}
+}
+
+@media (max-width:450px){
+	html{
+		font-size: 50%;
+	}
+
+	.heading{
+		
+		font-size: 48px;
+	}
+
+}
+
+</style>
+
+<body>
+
+<!-- header section starts -->
+<header>
+ 	<h2 class="logo">୨ৎ PORTFOLIO</h2>
+	
+	<nav class="navbar">
+		<a href="index.html">HOME</a>
+		<a href="aboutme.html">ABOUT ME</a>
+		<a href="education.html">EDUCATION</a>
+		<a href="gallery.html">GALLERY</a>
+	</nav>
+
+	<div class="hamburger">
+ 			<i class="fa-solid fa-bars"></i> 
+	</div>
+</header>
+
+<!-- header section ends -->
+
+<!-- about section starts -->
+
+<section id="aboutme">
+    <h1 class="heading"><span>about</span> me</h1>
+    
+    <div class="container">
+        <!-- Profile Picture and Intro -->
+        <div class="profile-pic">
+            <img src="images/pic47.jpg" alt="Nur Alya Azzariza">
+        </div>
+
+        <!-- Bio Content -->
+        <p class="bio">
+            Hello! My name is <strong>Nur Alya Azzariza Binti Azahar</strong>. I am 20 years old, and I come from <strong>Kuala Terengganu</strong>, a beautiful coastal city located in the northeastern part of Peninsular Malaysia. It’s known for its rich culture, stunning beaches, and historic landmarks.
+            <br><br>
+            Being the second of three siblings, I have always considered myself lucky to have a loving and supporting family. While my little sibling is a continual source of happiness and liveliness in the home, my older sibling is someone I look up to for insight. We have a close connection, and I enjoy our time together.
+            <br><br>
+            My biggest sources of inspiration have been my parents. They have taught me the importance of hard work, resolve, and compassion. They have consistently inspired me to go for my goals and overcome any challenges.
+            <br><br>
+            Learning new things has always been a hobby of mine. At the moment, I'm studying <strong>Information Management</strong> at UiTM Machang in Kelantan. I'm excited to keep looking for new chances in my academic and personal lives because it's been a rewarding and difficult experience.
+            <br><br>
+            Regarding my personality, I think of myself as <strong>compassionate</strong>. I enjoy looking after others, learning from others, and investigating various viewpoints. Even though I sometimes get terrified, I always try to see the positive side of every situation.
+            <br><br>
+            In my free time, I enjoy going café hunting with friends and family, where I get to experience various flavors and tastes. I will always be enjoying spending time with my friends and family, making memories and strengthening relationships with them.
+        </p>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- experiences section starts -->
+
+<section class="experience-section">
+    <h2>Experiences</h2>
+
+    <div class="experience">
+      <h3>Terengganu State Representative - Fencing Sports</h3>
+      <p class="date">2018 - 2021</p>
+    </div>
+
+    <div class="experience">
+      <h3>Programs and Activities for Service Learning Malaysia - University for Society (SULAM)</h3>
+      <p class="date">2023</p>
+    </div>
+
+    <div class="experience">
+      <h3>Industrial Training at Ministry of Tourism, Arts, and Culture (MoTAC)</h3>
+      <p class="date">July 2024 - September 2024</p>
+    </div>
+  </section>
+
+<!-- experiences section ends -->
+
+<!-- family section starts -->
+
+<section class="family-section">
+    <h2>Meet My Family</h2>
+    <div class="family-cards">
+        <div class="family-card">
+            <img src="images/picmama.jpg" alt="Mother">
+            <div class="family-info">
+                <h3>Mother</h3>
+                <p class="name">Khairimiza Musa</p>
+                <p class="description">A loving housewife who takes care of our home.</p>
+            </div>
+        </div>
+
+	<div class="family-card">
+            <img src="images/picabah.jpg" alt="Father">
+            <div class="family-info">
+                <h3>Father</h3>
+                <p class="name">Azahar Jaafar</p>
+                <p class="description">A male that hardworking.</p>
+            </div>
+        </div>
+
+        
+	<div class="family-card">
+            <img src="images/picchef.jpg" alt="Brother">
+            <div class="family-info">
+                <h3>Brother</h3>
+                <p class="name">Muhd Hafizul Hilmi Azahar</p>
+                <p class="description">A 24 years old boy and a role model for me.</p>
+            </div>
+        </div>
+
+        <div class="family-card">
+            <img src="images/piczu.jpg" alt="Sister">
+            <div class="family-info">
+                <h3>Sister</h3>
+                <p class="name">Nur Zetty Zulaikha Azahar</p>
+                <p class="description">A happy go lucky 14years old kids.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- family section ends -->
+
+<!-- song section starts -->
+
+<section class="song-section">
+
+    <div class="audio-box">
+        <div class="audio-label">Fav Song</div>
+        
+        <img src="images/picalbum.jpg" alt="Audio Cover 1" class="audio-image">
+
+        <audio controls class="audio-player">
+            <source src="audio/Fana Merah Jambu.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="audio-box">
+        <div class="audio-label">Fav Song</div>
+
+        <img src="images/picalbum1.jpg" alt="Audio Cover 2" class="audio-image">
+
+        <audio controls class="audio-player">
+            <source src="audio/Romantic Echoes - Tentang Bunga.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="audio-box">
+        <div class="audio-label">Fav Song</div>
+
+        <img src="images/picalbum2.png" alt="Audio Cover 3" class="audio-image">
+
+        <audio controls class="audio-player">
+            <source src="audio/Yuna - Dan Sebenarnya.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</section>
+
+<!-- song section ends --->
+
+<!-- footer section starts -->
+
+<section class="footer">
+	<div class="footer-left">
+		<h3>୨ৎ PORTFOLIO</h3>
+			
+			<p class="footer-links">
+				<a href="index.html">Home</a>
+				|
+				<a href="aboutme.html">About Me</a>
+				|
+				<a href="education.html">Education</a>
+				|
+				<a href="gallery.html">Gallery</a>
+			</p>
+	</div>
+
+	<div class="footer-center">
+		<div>
+			<i class="fa-solid fa-location-dot"></i>
+			<p>Malaysia</p> 
+		</div>
+			
+		<div>
+			<i class="fa-solid fa-phone"></i>
+			<p>+60109845141</p> 
+		</div>
+
+		<div>
+    			<i class="fa-solid fa-envelope"></i>
+    			<p>
+        			<a href="mailto:alyaazzrz@gmail.com" class="email-link">alyaazzrz@gmail.com</a>
+    			</p>
+		</div>
+		</div>
+		
+
+	<div class="footer-right">
+    		<div class="footer-icons">
+        		<a href="https://www.instagram.com/lavmatchaaa/profilecard/?igsh=eDc4NzUya3lnank4" target="instagram">
+            		<i class="fa-brands fa-instagram"></i>
+        		</a>
+       
+        		<a href="https://www.wasap.my/0109845141/pm" target="whatsapp">
+            		<i class="fa-brands fa-whatsapp"></i>
+        		</a>
+    		</div>
+	</div>
+</section>
+		
+<!-- copyright section -->
+	<section class="copyright">
+    		<p>&copy; 2024 Alya Azzariza. All rights reserved.</p>
+	</section>
+<!-- footer section ends -->
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
+</script>
+
+
+</body>
+</html>
